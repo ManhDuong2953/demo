@@ -8,3 +8,33 @@
 html::-webkit-scrollbar{
   display: none;
 }
+
+.section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+}
+.content-item {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
