@@ -1,9 +1,40 @@
 <template>
-  <section ref="sectionRef" class="section z-40">
-    <div ref="bgRef" class="background bg-gradient-to-br from-yellow-600 to-yellow-300"></div>
-    <div ref="contentRef" class="content">
-      <h2 class="content-item text-5xl font-semibold">Tiện ích vượt trội</h2>
-      <p class="content-item text-base mt-3">Hồ bơi, gym, khu vui chơi, tất cả trong tầm tay</p>
+  <section ref="sectionRef4" class="bg-black text-white section">
+    <!-- Background nếu muốn hiệu ứng nền -->
+    <div ref="bgRef4" class="bg-black background"></div>
+
+    <div
+      ref="contentRef4"
+      class="relative flex justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper"
+    >
+      <!-- Ảnh chính -->
+      <div class="flex-[2] relative overflow-hidden">
+        <img
+          src="https://themarc88.com.vn/images/map-m88.png"
+          alt="img"
+          class="w-full h-full object-cover image-main-amenities"
+        />
+      </div>
+
+      <!-- Text + buttons -->
+      <div class="flex-1 py-12 pl-14 pr-12 h-full flex flex-col justify-between">
+        <h3 class="text-white mb-10 font-bold text-4xl pt-12 text-end content-text-4">
+          TÂM ĐIỂM TRUNG TÂM KINH TẾ NĂNG ĐỘNG PHÍA TÂY
+          <span class="text-[#C6A456]">THỦ ĐÔ</span>
+        </h3>
+        <div class="flex flex-col items-stretch">
+          <button
+            class="cursor-pointer hover:bg-[#C2B59B] text-white text-md uppercase bg-[#C6A456] rounded-[100px] px-8 py-4 w-full h-[60px] my-3 border-none outline-none"
+          >
+            Kết Nối GIAO THÔNG
+          </button>
+          <button
+            class="cursor-pointer hover:bg-[#C2B59B] text-white text-md uppercase bg-[#C6A456] rounded-[100px] px-8 py-4 w-full h-[60px] my-3 border-none outline-none"
+          >
+            TIỆN ÍCH
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -15,59 +46,65 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const sectionRef = ref()
-const bgRef = ref()
-const contentRef = ref()
+const sectionRef4 = ref()
+const bgRef4 = ref()
+const contentRef4 = ref()
 
 onMounted(() => {
-  const contentItems = contentRef.value.querySelectorAll('.content-item')
-  gsap.set(bgRef.value, { y: '100%' })
-  gsap.set(contentItems, { opacity: 0, y: 80 })
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: sectionRef.value,
-      start: 'top top',
-      end: '+=100%',
-      scrub: 1,
-      pin: true,
-      pinSpacing: false
-    }
+  // Đặt trạng thái ban đầu: phóng to x4 và trượt phải
+  gsap.set(contentRef4.value, {
+    scale: 7,
+    x: 300,
+    opacity: 0,
+    transformOrigin: 'center center',
   })
 
-  tl.to(bgRef.value, { y: '0%', duration: 1, ease: 'power2.out' }, 0)
-  tl.to(contentItems, {
+  // Nếu muốn background trượt từ dưới lên
+  gsap.set(bgRef4.value, { y: '100%' })
+
+  // Timeline scroll
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: sectionRef4.value,
+      start: 'top top',
+      end: '+=500',
+      scrub: 1,
+      pin: true,
+    },
+  })
+
+  // Background từ dưới lên (tuỳ chọn)
+  tl.to(bgRef4.value, { y: 0, duration: 1 })
+
+  // Khối contentRef4 thu nhỏ lại và về đúng vị trí
+  tl.to(contentRef4.value, {
+    scale: 1,
+    x: 0,
     opacity: 1,
-    y: 0,
-    stagger: 0.2,
-    duration: 1,
-    ease: 'power2.out'
-  }, '>-0.3')
+    duration: 2,
+    ease: 'power2.out',
+  })
 })
 </script>
 
 <style scoped>
 .section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
+
 .background {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
-.content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+
+.image-main-amenities {
+  transition: transform 0.3s ease;
+}
+
+.content-wrapper {
+  will-change: transform;
 }
 </style>
-
