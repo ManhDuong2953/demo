@@ -1,18 +1,20 @@
 <template>
   <main>
+    <NavBar />
     <SectionHero />
     <SectionDesign />
     <SectionLocation />
-    <SectionAmenities />
+    <!-- <SectionAmenities />
     <SectionExperience />
     <SectionTestimonial />
     <SectionGallery />
     <SectionRegister />
-    <SectionFooter />
+    <SectionFooter /> -->
   </main>
 </template>
 
 <script setup>
+import NavBar from './components/navbar/index.vue'
 import SectionHero from './components/sections/SectionHero.vue'
 import SectionDesign from './components/sections/SectionDesign.vue'
 import SectionLocation from './components/sections/SectionLocation.vue'

@@ -1,13 +1,14 @@
 <template>
-  <BaseSection>
-    <template #background>
-      <div class="w-full h-full bg-gray-800"></div>
-    </template>
-
-    <div class="content-item text-xl">© 2025 The Marc 88. All rights reserved.</div>
-  </BaseSection>
+  <section class="section-footer bg-black text-white py-12 text-center">
+    <p class="text-sm">© 2025 Aurora Living. All rights reserved.</p>
+  </section>
 </template>
 
-<script setup>
-import BaseSection from '../BaseSection.vue'
-</script>
+<style scoped>
+.section-footer {
+  background: #000;
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+}
+</style>
