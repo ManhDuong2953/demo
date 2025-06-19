@@ -60,10 +60,9 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef2.value,
       start: 'top top',
-      end: '+=200%',
+      end: '+=500%',
       scrub: 1,
       pin: true,
-      pinSpacing: true,
     }
   });
 
@@ -86,7 +85,8 @@ onMounted(() => {
       x: 0,
       duration: 1,
       ease: 'power2.out'
-    }, '-=0.9');
+    }, '-=0.9')
+    .to(bgRef2.value, { duration: 1, ease: 'power2.out' }, '+=0.5');
 });
 </script>
 

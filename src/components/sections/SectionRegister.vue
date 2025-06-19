@@ -1,12 +1,12 @@
 <template>
-  <section ref="sectionRef" class="section z-70">
-    <div ref="bgRef" class="background bg-gradient-to-br from-teal-700 to-cyan-400"></div>
+  <section ref="sectionRef" class="z-70 section">
+    <div ref="bgRef" class="bg-gradient-to-br from-teal-700 to-cyan-400 background"></div>
     <div ref="contentRef" class="content">
-      <h2 class="content-item text-5xl font-semibold">Đăng ký nhận thông tin</h2>
-      <form class="content-item mt-4 space-y-3">
-        <input type="text" placeholder="Họ tên" class="w-64 px-4 py-2 rounded" />
-        <input type="email" placeholder="Email" class="w-64 px-4 py-2 rounded" />
-        <button class="bg-white text-black px-6 py-2 rounded font-semibold">Gửi</button>
+      <h2 class="font-semibold text-5xl content-item">Đăng ký nhận thông tin</h2>
+      <form class="space-y-3 mt-4 content-item">
+        <input type="text" placeholder="Họ tên" class="px-4 py-2 rounded w-64" />
+        <input type="email" placeholder="Email" class="px-4 py-2 rounded w-64" />
+        <button class="bg-white px-6 py-2 rounded font-semibold text-black">Gửi</button>
       </form>
     </div>
   </section>
@@ -35,7 +35,8 @@ onMounted(() => {
       end: '+=100%',
       scrub: 1,
       pin: true,
-      pinSpacing: false
+pinSpacing: false,
+
     }
   })
 

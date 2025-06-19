@@ -5,10 +5,10 @@
     <SectionDesign />
     <SectionLocation />
     <SectionAmenities />
-   <SectionExperience />
-     <!--<SectionTestimonial />
+    <SectionExperience />
+    <SectionTestimonial />
     <SectionGallery />
-    <SectionRegister />
+    <!--<SectionRegister />
     <SectionFooter /> -->
   </main>
 </template>

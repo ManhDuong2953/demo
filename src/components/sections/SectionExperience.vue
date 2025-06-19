@@ -1,49 +1,36 @@
 <template>
-  <section ref="sectionRef5" class="bg-black text-white section">
+  <section ref="sectionRef5" class="bg-[#011A1A] text-white section">
     <!-- Background hiệu ứng -->
-    <div ref="bgRef5" class="bg-black background"></div>
+    <div ref="bgRef5" class="bg-[#011A1A] background"></div>
 
-    <div
-      ref="contentRef5"
-      class="relative flex justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper"
-    >
+    <div ref="contentRef5"
+      class="relative flex justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper">
       <!-- Nội dung slide -->
-      <div
-        class="flex-1 py-12 pl-14 pr-12 h-full flex flex-col justify-between"
-      >
-        <h3
-          ref="titleRef"
-          class="text-white mb-10 font-bold text-4xl pt-12 text-start w-1/2 content-text-4"
-        >
-          ĐỊNH VỊ CHUẨN MỰC VĂN PHÒNG
-          <span class="text-[#C6A456]">HẠNG SANG</span>
-        </h3>
-
-        <div
-          class="flex flex-col items-stretch w-1/2 overflow-hidden relative h-[250px]"
-        >
-          <div
-            v-for="(item, index) in texts"
-            :key="index"
-            class="absolute w-full top-0 left-0"
-            :ref="(el) => (textRefs[index] = el)"
-          >
-            <h3 class="text-2xl uppercase font-semibold text-start">
-              {{ item.title }}
+      <div class="flex flex-col justify-center items-center mx-auto container">
+        <div class="flex justify-center items-center w-full h-[80vh]">
+          <div class="flex flex-col flex-1 justify-between py-12 pr-12 pl-14 h-full">
+            <h3 ref="titleRef" class="mb-10 pt-12 w-3/5 font-bold text-white text-5xl text-start content-text-4">
+              ĐỊNH VỊ CHUẨN MỰC VĂN PHÒNG
+              <span class="text-[#C6A456]">HẠNG SANG</span>
             </h3>
-            <p class="text-start text-lg mt-3">
-              {{ item.text }}
-            </p>
+            <div class="w-full">
+              <div class="relative flex flex-col items-stretch w-3/5 h-[150px] overflow-hidden">
+                <div v-for="(item, index) in texts" :key="index" class="top-0 left-0 absolute w-full"
+                  :ref="(el) => (textRefs[index] = el)">
+                  <h3 class="font-semibold text-2xl text-start uppercase">
+                    {{ item.title }}
+                  </h3>
+                  <p class="mt-3 text-lg text-start">
+                    {{ item.text }}
+                  </p>
+                </div>
+              </div>
+              <!-- Progress bar -->
+              <div class="bg-[#333] mt-8 rounded-lg w-1/2 h-[7px]">
+                <div ref="progressBar" class="bg-[#C6A456] h-full transition-all duration-500" style="width: 25%"></div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <!-- Progress bar -->
-        <div class="h-[7px] rounded-lg w-full bg-[#333] mt-8">
-          <div
-            ref="progressBar"
-            class="h-full bg-[#C6A456] transition-all duration-500"
-            style="width: 25%"
-          ></div>
         </div>
       </div>
     </div>
@@ -89,6 +76,13 @@ onMounted(() => {
   });
   gsap.set(bgRef5.value, { y: "100%" });
 
+  gsap.set(titleRef.value, {
+    x: 300,
+    opacity: 0,
+  });
+  gsap.set(progressBar.value, {
+    width: "0%",
+  });
   texts.forEach((_, index) => {
     gsap.set(textRefs[index], {
       x: 300,
@@ -100,11 +94,12 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef5.value,
       start: "top top",
-      end: "+=2500",
+      end: "+=500%",
       scrub: 1,
       pin: true,
     },
   });
+
 
   tl.to(bgRef5.value, { y: 0, duration: 1 });
   tl.to(contentRef5.value, {
@@ -113,27 +108,31 @@ onMounted(() => {
     opacity: 1,
     duration: 2,
     ease: "power2.out",
+  }).to(titleRef.value, {
+    x: 0,
+    opacity: 1,
+    duration: 1,
   });
   tl.to(titleRef.value, { x: 0, opacity: 1, duration: 1 });
-  
+
   tl.to(textRefs[0], { x: 0, opacity: 1, duration: 1 }).to(progressBar.value, {
     width: "25%",
   });
-  tl.to(progressBar.value, {});
+  tl.to(progressBar.value, { duration: 2 });
 
   // Slide lần 1
   tl.to(textRefs[0], { x: -300, opacity: 0, duration: 1 });
   tl.to(textRefs[1], { x: 0, opacity: 1, duration: 1 }).to(progressBar.value, {
     width: "50%",
   });
-  tl.to(progressBar.value, {});
+  tl.to(progressBar.value, { duration: 2 });
 
   // Slide lần 2
   tl.to(textRefs[1], { x: -300, opacity: 0, duration: 1 });
   tl.to(textRefs[2], { x: 0, opacity: 1, duration: 1 }).to(progressBar.value, {
     width: "100%",
   });
-  tl.to(progressBar.value, {});
+  tl.to(progressBar.value, { duration: 2 });
 });
 </script>
 
