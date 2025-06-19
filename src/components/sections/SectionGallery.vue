@@ -5,16 +5,17 @@
     <div ref="contentRef6"
       class="relative flex flex-col justify-center items-center w-screen h-screen overflow-hidden text-center">
       <!-- TEXT -->
-      <h3 class="z-10 absolute mb-10 font-bold text-[#C6A456] text-4xl content-text-6">
-        NGHỆ THUẬT KIẾN TRÚC ĐỘC BẢN
+      <h3 ref="titleRef6" class="absolute mt-12 mb-10 w-full font-bold text-5xl text-center">
+        <span class="text-[#C6A456]">HƠN CẢ MỘT KHÔNG GIAN
+        </span>LÀM VIỆC
       </h3>
 
       <!-- IMAGE-location STACK -->
       <div class="z-10 w-full h-full">
         <img v-for="(img, index) in arrImg" :key="index"
           style="translate: none;rotate: none;scale: none;transform: translate(-50%, 0px);opacity: 1;"
-          class="left-1/2 z-[11] absolute w-[50vw] h-screen object-cover -translate-x-1/2 image-location"
-          :class="`image-location${index + 1}`" :src="img" alt="image" />
+          class="left-1/2 z-[11] absolute w-[70vw] h-screen object-cover -translate-x-1/2 image-gallery"
+          :class="`image-gallery${index + 1}`" :src="img" alt="image" />
       </div>
     </div>
 
@@ -28,22 +29,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const arrImg = [
-  'https://admin.themarc88.com.vn/assets/a98bc324-ef77-4581-8590-935cd5bce805',
-  'https://admin.themarc88.com.vn/assets/0ab3922b-06a5-4f5c-85c3-c4759369ddbf',
-  'https://admin.themarc88.com.vn/assets/95e964a0-7ea8-45c3-b35f-a8f6c4276410',
-  'https://admin.themarc88.com.vn/assets/03139784-6c13-4fcd-8a4c-81354cb4f760',
+  'https://admin.themarc88.com.vn/assets/0c81be9b-1ba8-4120-891e-d7b5ff32d759',
+  'https://admin.themarc88.com.vn/assets/809d4b21-d78e-422f-8195-5ac53ae4318b',
+  'https://admin.themarc88.com.vn/assets/7d373925-2b92-4ddd-b59f-7f35f33aac22',
+  'https://admin.themarc88.com.vn/assets/4c3938a5-f193-417c-ba75-9e34718f1261',
 ];
 const sectionRef6 = ref();
 const bgRef6 = ref();
 const contentRef6 = ref();
-
+const titleRef6 = ref();
 onMounted(() => {
-  const text = contentRef6.value.querySelector('.content-text-6');
-  const images = contentRef6.value.querySelectorAll('.image-location');
+  const images = contentRef6.value.querySelectorAll('.image-gallery');
 
   // 1. Set trạng thái ban đầu
   gsap.set(bgRef6.value, { y: '100%' });
-  gsap.set(text, { opacity: 0, y: 50 });
+  gsap.set(titleRef6.value, { opacity: 0, x: -300 });
 
   images.forEach((img, i) => {
     gsap.set(img, {
@@ -69,10 +69,10 @@ onMounted(() => {
   // 3. Animate tuần tự
   tl.to(bgRef6.value, { y: 0, duration: 1 });
 
-  tl.to(text, { opacity: 1, y: 0, duration: 10 });
-  tl.to(text, { duration: 10 });
+  tl.to(titleRef6.value, { opacity: 1, x: 0, duration: 10 });
+  tl.to(titleRef6.value, { duration: 10 });
 
-  tl.to(text, { opacity: 0, y: -50, duration: 10 });
+  tl.to(titleRef6.value, { opacity: 0, y: -50, duration: 10 });
 
   images.forEach((img, i) => {
     tl.to(img, {
