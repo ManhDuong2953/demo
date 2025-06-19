@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef2" class="section">
+  <section ref="sectionRef2" class="bg-[#D9D9D9] section">
     <div ref="bgRef2" class="bg-[#D9D9D9] background"></div>
     <div ref="contentRef2" class="h-screen content">
       <div class="flex py-12 container">

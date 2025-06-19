@@ -8,8 +8,9 @@
     <SectionExperience />
     <SectionTestimonial />
     <SectionGallery />
-    <!--<SectionRegister />
-    <SectionFooter /> -->
+    <SectionRegister />
+    <SectionNews />
+    <SectionFooter />
   </main>
 </template>
 
@@ -23,6 +24,7 @@ import SectionExperience from "./components/sections/SectionExperience.vue";
 import SectionTestimonial from "./components/sections/SectionTestimonial.vue";
 import SectionGallery from "./components/sections/SectionGallery.vue";
 import SectionRegister from "./components/sections/SectionRegister.vue";
+import SectionNews from "./components/sections/SectionNews.vue";
 import SectionFooter from "./components/sections/SectionFooter.vue";
 </script>
 

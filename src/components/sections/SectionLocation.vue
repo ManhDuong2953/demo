@@ -59,7 +59,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef3.value,
       start: 'top top',
-      end: '+=5000',
+      end: '+=500%',
       scrub: 2,
       pin: true,
       // markers: true, // Bật lên nếu muốn debug
