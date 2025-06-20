@@ -4,7 +4,7 @@
     class="top-0 left-0 z-50 fixed flex justify-between items-center bg-transparent backdrop-blur-md px-6 pt-4 w-full h-[100px] text-white transition-transform duration-300"
     :class="{ '-translate-y-[200%]': isHidden }">
     <div class="container">
-      <div class="flex items-end h-[90px]">
+      <div class="flex items-end h-[100px]">
         <!-- Toggle Menu icon -->
         <button @click="toggleMenu"
           class="flex-1 justify-self-start pt-6 pr-6 pb-4 border-white border-b font-bold text-3xl text-start boder-solid">
@@ -28,6 +28,7 @@
   <transition name="fade">
     <div v-if="menuOpen"
       class="z-40 fixed inset-0 flex flex-col justify-center items-center space-y-6 bg-[#011a1acc] font-semibold text-[#D3A84A] text-2xl"
+      :class="{ 'opacity-1': menuOpen }"
       @mouseenter="lockScroll" @mouseleave="unlockScroll">
 
       <!-- Menu Items -->
@@ -92,6 +93,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 

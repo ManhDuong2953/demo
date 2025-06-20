@@ -1,8 +1,8 @@
 <template>
   <section ref="sectionRef2" class="bg-[#D9D9D9] section">
     <div ref="bgRef2" class="bg-[#D9D9D9] background"></div>
-    <div ref="contentRef2" class="h-screen content">
-      <div class="flex py-12 container">
+    <div ref="contentRef2" class="md:h-screen min-h-screen content">
+      <div class="flex md:flex-row flex-col py-12 container">
         <!-- TEXT -->
         <div class="flex flex-col flex-1 justify-start gap-8 px-6 md:px-12 md:py-12">
           <h3 class="font-semibold text-[#C6A456] text-4xl text-start content-text-2 leading-tight">
@@ -23,10 +23,10 @@
         </div>
 
         <!-- IMAGES -->
-        <div class="flex flex-1 justify-between items-center">
-          <img class="px-3 h-[70vh] object-contain image-design-1"
+        <div class="flex md:flex-row flex-col flex-1 justify-between items-center">
+          <img class="my-3 px-3 h-[65vw] md:h-[70vh] object-contain image-design-1"
             src="https://admin.themarc88.com.vn/assets/bc4be0a3-e6ad-4d9a-a9f1-1e41910c1e4b" alt="image1" />
-          <img class="px-3 h-[70vh] object-contain image-design-2"
+          <img class="my-3 px-3 h-[65vw] md:h-[70vh] object-contain image-design-2"
             src="https://admin.themarc88.com.vn/assets/5062bdfa-13f6-49c3-9c23-5d8569dabc6c" alt="image2" />
         </div>
       </div>

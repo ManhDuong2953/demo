@@ -13,7 +13,7 @@
       <div class="z-10 w-full h-full">
         <img v-for="(img, index) in arrImg" :key="index"
           style="translate: none;rotate: none;scale: none;transform: translate(-50%, 0px);opacity: 1;"
-          class="left-1/2 z-[11] absolute w-[50vw] h-screen object-cover -translate-x-1/2 image-location"
+          class="top-1/2 md:top-auto left-1/2 z-[11] absolute w-[100vw] md:w-[60vw] md:h-screen object-cover -translate-y-[50%] md:-translate-x-1/2 md:translate-y-0 image-location"
           :class="`image-location${index + 1}`" :src="img" alt="image" />
       </div>
     </div>
@@ -38,6 +38,7 @@ const bgRef3 = ref();
 const contentRef3 = ref();
 
 onMounted(() => {
+    const isLargeScreen = window.innerWidth >= 768;
   const text = contentRef3.value.querySelector('.content-text-3');
   const images = contentRef3.value.querySelectorAll('.image-location');
 
@@ -86,7 +87,7 @@ onMounted(() => {
       duration: 15,
     });
 
-    if (i < images.length - 1) {
+    if (i < images.length - 1 && isLargeScreen) {
       tl.to(img, {
         opacity: 1,
         y: 100,

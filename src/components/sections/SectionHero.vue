@@ -3,8 +3,8 @@
     <div ref="bgRef" class="bg-position-[center_top_0rem] bg-no-repeat bg-center background"
       :style="{ backgroundImage: `url(${bgImage})` }"></div>
     <div ref="contentRef" class="content">
-      <h1 class="font-bold text-6xl content-item">Chào mừng bạn đến với Aurora</h1>
-      <p class="mt-4 text-lg content-item">Không gian sống đẳng cấp giữa lòng thành phố</p>
+      <h1 class="font-bold text-5xl content-item">Chào mừng bạn đến với Aurora</h1>
+      <p class="mt-5 text-xl content-item">Không gian sống đẳng cấp giữa lòng thành phố</p>
     </div>
   </section>
 </template>

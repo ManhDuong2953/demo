@@ -4,16 +4,16 @@
     <div ref="bgRef4" class="bg-black background"></div>
 
     <div ref="contentRef4"
-      class="relative flex justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper">
+      class="relative flex md:flex-row flex-col justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper">
       <!-- Ảnh chính -->
-      <div class="relative flex-[5] overflow-hidden">
+      <div class="relative md:flex-[5] w-full min-h-1/2 overflow-hidden">
         <img src="https://themarc88.com.vn/images/map-m88.png" alt="img"
           class="w-full h-full object-cover image-main-amenities" />
       </div>
 
       <!-- Text + buttons -->
-      <div ref="textRef4" class="flex flex-col flex-[2] justify-between py-12 pr-12 pl-14 h-full">
-        <h3 class="mb-10 pt-12 font-bold text-white text-4xl text-end content-text-4">
+      <div ref="textRef4" class="flex flex-col md:flex-[2] justify-between py-12 pr-12 pl-14 h-full">
+        <h3 class="mb-10 pt-12 font-bold text-white text-4xl text-center md:text-end content-text-4">
           TÂM ĐIỂM TRUNG TÂM KINH TẾ NĂNG ĐỘNG PHÍA TÂY
           <span class="text-[#C6A456]">THỦ ĐÔ</span>
         </h3>

@@ -123,6 +123,8 @@ onMounted(() => {
   tl.to(bgRef8.value, { y: 0, duration: 1 });
   tl.to(textRef8.value, { autoAlpha: 1, x: 0, duration: 1 }, '<0.2');
   tl.to(sliderRef8.value, { autoAlpha: 1, y: 0, duration: 1 }, '<0.2');
+  tl.to({}, { duration: 1 });
+
 });
 </script>
 

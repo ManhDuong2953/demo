@@ -9,12 +9,12 @@
       <div class="flex flex-col justify-center items-center mx-auto container">
         <div class="flex justify-center items-center w-full h-[80vh]">
           <div class="flex flex-col flex-1 justify-between py-12 pr-12 pl-14 h-full">
-            <h3 ref="titleRef" class="mb-10 pt-12 w-3/5 font-bold text-white text-5xl text-start content-text-4">
+            <h3 ref="titleRef" class="mb-10 pt-12 md:w-3/5 font-bold text-white text-5xl text-start content-text-4">
               ĐỊNH VỊ CHUẨN MỰC VĂN PHÒNG
               <span class="text-[#C6A456]">HẠNG SANG</span>
             </h3>
             <div class="w-full">
-              <div class="relative flex flex-col items-stretch w-3/5 h-[150px] overflow-hidden">
+              <div class="relative flex flex-col items-stretch md:w-3/5 h-[150px] overflow-hidden">
                 <div v-for="(item, index) in texts" :key="index" class="top-0 left-0 absolute w-full"
                   :ref="(el) => (textRefs[index] = el)">
                   <h3 class="font-semibold text-2xl text-start uppercase">
@@ -26,7 +26,7 @@
                 </div>
               </div>
               <!-- Progress bar -->
-              <div class="bg-[#333] mt-8 rounded-lg w-1/2 h-[7px]">
+              <div class="bg-[#333] mt-8 rounded-lg w-3/5 md:w-1/2 h-[7px]">
                 <div ref="progressBar" class="bg-[#C6A456] h-full transition-all duration-500" style="width: 25%"></div>
               </div>
             </div>
@@ -132,7 +132,7 @@ onMounted(() => {
   tl.to(textRefs[2], { x: 0, opacity: 1, duration: 1 }).to(progressBar.value, {
     width: "100%",
   });
-  tl.to(progressBar.value, { duration: 2 });
+  tl.to({ duration: 5 });
 });
 </script>
 
