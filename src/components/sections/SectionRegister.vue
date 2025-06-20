@@ -4,8 +4,9 @@
 
     <div ref="contentRef7" class="h-screen content">
       <div class="flex items-center py-12 container">
+        <div class="flex-1"></div>
         <!-- TEXT + IMAGES -->
-        <div class="flex flex-col flex-[4] justify-start gap-8 px-6 md:px-12 md:py-12">
+        <div class="flex flex-col flex-[7] justify-start gap-8 px-6 md:px-12 md:py-12">
           <h3 ref="titleRef7" class="font-semibold text-white text-5xl text-end leading-tight">
             <span class="text-[#C6A456]">ĐƠN VỊ PHÁT TRIỂN</span> DỰ ÁN
           </h3>
@@ -82,7 +83,8 @@ onMounted(() => {
   tl.to(bgRef7.value, { y: 0, duration: 1, ease: 'power2.out' })
     .to(titleRef7.value, { opacity: 1, x: 0, duration: 1, ease: 'power2.out' }, '+=0.5')
     .to([image1, text1], { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power2.out' }, '+=0.5')
-    .to([image2, text2], { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power2.out' }, '+=0.5');
+    .to([image2, text2], { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power2.out' }, '+=0.5')
+    .to(contentRef7.value, { opacity: 1, duration: 1 }, '+=0.5');
 });
 </script>
 

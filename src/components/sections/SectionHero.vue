@@ -33,8 +33,6 @@ onMounted(() => {
       end: '+=200%',
       scrub: 1,
       pin: true,
-pinSpacing: false,
-      
     }
   });
 

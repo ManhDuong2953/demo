@@ -48,7 +48,7 @@ onMounted(() => {
   images.forEach((img, i) => {
     gsap.set(img, {
       opacity: 0,
-      x: -0.5,
+      x: "-50%",
       y: 1000,
       scale: i === 0 ? 0.5 : 2,
     });
@@ -62,7 +62,6 @@ onMounted(() => {
       end: '+=500%',
       scrub: 1,
       pin: true,
-      pinSpacing: true,
       // markers: true, // Bật lên nếu muốn debug
     },
   });

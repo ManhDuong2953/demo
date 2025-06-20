@@ -1,17 +1,17 @@
 <template>
-  <footer ref="footerRef" class="bg-[#1a2e2e px-4 py-10 text-[#d4c8b2]">
-    <div class="flex md:flex-row flex-col items-start gap-8 mx-auto container">
+  <footer ref="footerRef" class="bg-[#1a2e2e px-4 py-10 text-[white]">
+    <div class="flex md:flex-row flex-col items-center gap-8 mx-auto container">
       <!-- Logo -->
-      <div class="mb-4 w-[250px]">
+      <div class="mb-4 p-5 w-[300px]">
         <img src="https://admin.themarc88.com.vn/assets/1fb457f8-7ed7-41ce-8684-e8683bd856a9" alt="">
       </div>
       <div class="flex flex-col flex-1 w-full">
         <div class="flex pt-4">
           <!-- Địa chỉ -->
           <div class="flex flex-col flex-1 text-left">
-            <h3 class="mb-2 text-[#d4c8b2] text-lg">Địa chỉ:</h3>
-            <div class="flex">
-              <div class="w-5">
+            <h3 class="mb-2 mb-3 font-semibold text-[white] text-lg">Địa chỉ:</h3>
+            <div class="flex items-start mt-2">
+              <div class="mr-4 w-5">
                 <svg width="25" height="23" viewBox="0 0 14 19" fill="none" class="block"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -25,8 +25,8 @@
                 <p class="mb-1">Quận Cầu Giấy, Hà Nội</p>
               </div>
             </div>
-            <div class="flex">
-              <div class="w-5"><svg width="25" height="15" viewBox="0 0 18 14" fill="none"
+            <div class="flex items-start mt-4">
+              <div class="mt-1 mr-4 w-5"><svg width="25" height="15" viewBox="0 0 18 14" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M0 2.75C0 1.51953 0.984375 0.5 2.25 0.5H15.75C16.9805 0.5 18 1.51953 18 2.75V11.75C18 13.0156 16.9805 14 15.75 14H2.25C0.984375 14 0 13.0156 0 11.75V2.75ZM1.125 2.75V4.15625L7.98047 9.21875C8.57812 9.64062 9.38672 9.64062 9.98438 9.21875L16.875 4.15625V2.75C16.875 2.15234 16.3477 1.625 15.75 1.625H2.21484C1.61719 1.625 1.08984 2.15234 1.08984 2.75H1.125ZM1.125 5.5625V11.75C1.125 12.3828 1.61719 12.875 2.25 12.875H15.75C16.3477 12.875 16.875 12.3828 16.875 11.75V5.5625L10.6523 10.1328C9.66797 10.8359 8.29688 10.8359 7.3125 10.1328L1.125 5.5625Z"
@@ -39,9 +39,9 @@
 
           <!-- Đơn vị chủ đầu & Hotline -->
           <div class="flex-1 text-left">
-            <h3 class="mb-2 text-[#d4c8b2] text-lg">Đơn vị chủ đầu:</h3>
+            <h3 class="mb-2 mb-3 font-semibold text-[white] text-lg">Đơn vị chủ đầu:</h3>
             <img src="https://themarc88.com.vn/images/savills.svg" alt="Savills Logo" class="mr-2 w-[80px]" />
-            <h3 class="mb-2 text-[#d4c8b2] text-lg">Hotline:</h3>
+            <h3 class="mt-3 mb-2 font-semibold text-[white] text-lg">Hotline:</h3>
             <div class="text-white"><a href="tel:0948 000 468"
                 class="flex items-center gap-4 text-white hover:text-secondary transition"><svg width="25" height="20"
                   viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,40 +52,45 @@
           </div>
 
           <!-- Trang chủ -->
-          <div class="flex-1 text-left">
-            <h3 class="mb-2 text-[#d4c8b2] text-lg">Trang chủ</h3>
-            <p class="mb-1">Tổng quan</p>
-            <p class="mb-1">Vị trí</p>
-            <p class="mb-1">Dự án</p>
-            <p class="mb-1">Chủ đầu tư</p>
-            <p class="mb-1">Ảnh</p>
-            <p class="mb-1">Tin tức</p>
-            <p class="mb-1">Tải brochure</p>
-            <p class="mb-1">Tải tờ rơi</p>
+          <div class="flex flex-col flex-1 text-left">
+            <a href="" class="hover:opacity-80 mb-1">Trang chủ</a>
+            <a href="" class="hover:opacity-80 mb-1">Tổng quan</a>
+            <a href="" class="hover:opacity-80 mb-1">Vị trí</a>
+            <a href="" class="hover:opacity-80 mb-1">Dự án</a>
+            <a href="" class="hover:opacity-80 mb-1">Chủ đầu tư</a>
+            <a href="" class="hover:opacity-80 mb-1">Ảnh</a>
+            <a href="" class="hover:opacity-80 mb-1">Tin tức</a>
+            <a href="" class="hover:opacity-80 mb-1">Tải brochure</a>
+            <a href="" class="hover:opacity-80 mb-1">Tải tờ rơi</a>
           </div>
 
 
         </div>
-        <button
-          class="hover:bg-[#a68f44] px-6 py-2 border border-[#c6a456] border-solid rounded rounded-[68px] w-fit text-white transition duration-300 cursor-pointer">LIÊN
-          HỆ
-          TƯ
-          VẤN
-          CHỦ ĐẦU</button>
-        <div class="flex justify-between pb-4 border-[#6b7280] border-t">
-          <div class="bg-[#0f1e1e] mt-6 py-2 text-[#d4c8b2] text-center">Copyright ©2023 TheMarc88. All rights reserved.
+        <div class="mt-2 mb-6">
+          <button
+            class="hover:bg-[#a68f44] px-6 py-2 border border-[#c6a456] border-solid rounded rounded-[68px] w-fit text-white text-xl uppercase transition duration-300 cursor-pointer">Liên
+            hệ tư vấn cho thuê
+          </button>
+        </div>
+        <div class="flex justify-between pb-4 border-t">
+          <div class="mt-6 text-[white] text-center">Copyright ©2023 TheMarc88. All rights reserved.
           </div>
           <!-- Social Icons -->
-          <div class="hidden md:flex items-center gap-4"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25"
-                height="25" viewBox="0 0 50 50">
+          <div class="hidden md:flex items-center gap-4 mt-6">
+            <a href="#" class="hover:opacity-80">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50">
                 <path fill="#C2B59B" stroke="#C2B59B"
                   d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z">
                 </path>
-              </svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48">
+              </svg>
+            </a>
+            <a href="#" class="hover:opacity-80"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48">
                 <path fill="#C2B59B"
                   d="M8.421,14h0.052l0,0C11.263,14,13,12,13,9.5C12.948,6.945,11.263,5,8.526,5S4,6.945,4,9.5 C4,12,5.736,14,8.421,14z M4,17h9v26H4V17z M44,26.5c0-5.247-4.253-9.5-9.5-9.5c-3.053,0-5.762,1.446-7.5,3.684V17h-9v26h9V28l0,0 c0-2.209,1.791-4,4-4s4,1.791,4,4v15h9C44,43,44,27.955,44,26.5z">
                 </path>
-              </svg></a></div>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

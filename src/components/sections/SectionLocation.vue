@@ -48,7 +48,7 @@ onMounted(() => {
   images.forEach((img, i) => {
     gsap.set(img, {
       opacity: 0,
-      x: -0.5,
+      x: "-50%",
       y: 1000,
       scale: i === 0 ? 0.5 : 2,
     });
@@ -96,6 +96,9 @@ onMounted(() => {
       });
     }
 
+    tl.to(img, {
+      duration: 15,
+    });
   });
 });
 </script>
