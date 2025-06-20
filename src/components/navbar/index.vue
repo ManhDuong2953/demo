@@ -70,7 +70,7 @@ const unlockScroll = () => {
 };
 
 const handleScroll = () => {
-  const current = window.scrollY;
+  const current = window.scrollY;  
   isHidden.value = current > lastScroll.value && current > 30;
   lastScroll.value = current;
 };

@@ -12,7 +12,7 @@
       </div>
 
       <!-- Text + buttons -->
-      <div class="flex flex-col flex-[2] justify-between py-12 pr-12 pl-14 h-full">
+      <div ref="textRef4" class="flex flex-col flex-[2] justify-between py-12 pr-12 pl-14 h-full">
         <h3 class="mb-10 pt-12 font-bold text-white text-4xl text-end content-text-4">
           TÂM ĐIỂM TRUNG TÂM KINH TẾ NĂNG ĐỘNG PHÍA TÂY
           <span class="text-[#C6A456]">THỦ ĐÔ</span>
@@ -41,12 +41,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const sectionRef4 = ref();
 const bgRef4 = ref();
+const textRef4 = ref();
 const contentRef4 = ref();
 
 onMounted(() => {
   // Đặt trạng thái ban đầu: phóng to x4 và trượt phải
   gsap.set(contentRef4.value, {
-    scale: 7,
+    scale: 6,
     x: 300,
     opacity: 0,
     transformOrigin: 'center center',
@@ -54,13 +55,14 @@ onMounted(() => {
 
   // Nếu muốn background trượt từ dưới lên
   gsap.set(bgRef4.value, { y: '100%' });
+  gsap.set(textRef4.value, { x: '100%' });
 
   // Timeline scroll
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: sectionRef4.value,
       start: 'top top',
-      end: '+=500%',
+      end: '+=200%',
       scrub: 1,
       pin: true,     
     },
@@ -74,11 +76,15 @@ onMounted(() => {
     scale: 1,
     x: 0,
     opacity: 1,
-    duration: 2,
+    duration: 1,
     ease: 'power2.out',
   });
+ 
+  // Text từ dưới lên
+  tl.to(textRef4.value, { x: 0, duration: 1 });
+
   // Hiệu ứng chờ 
-  tl.to(contentRef4.value, { duration: 2 });
+  tl.to(contentRef4.value, { duration: 1 });
 
 });
 </script>

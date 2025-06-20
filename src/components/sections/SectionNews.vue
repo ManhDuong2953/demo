@@ -114,7 +114,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef8.value,
       start: 'top top',
-      end: '+=300%',
+      end: '+=200%',
       pin: true,
       scrub: 1,
     }
