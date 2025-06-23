@@ -20,7 +20,7 @@
         <div class="flex flex-col items-stretch">
           <button
             class="bg-[#C6A456] hover:bg-[#C2B59B] my-3 px-8 py-4 border-none rounded-[100px] outline-none w-full h-[60px] text-md text-white uppercase cursor-pointer">
-            Kết Nối GIAO THÔNG
+            KẾT NỐI GIAO THÔNG
           </button>
           <button
             class="bg-[#C6A456] hover:bg-[#C2B59B] my-3 px-8 py-4 border-none rounded-[100px] outline-none w-full h-[60px] text-md text-white uppercase cursor-pointer">
@@ -55,7 +55,7 @@ onMounted(() => {
 
   // Nếu muốn background trượt từ dưới lên
   gsap.set(bgRef4.value, { y: '100%' });
-  gsap.set(textRef4.value, { x: '100%' });
+  gsap.set(textRef4.value, { x: '100%', opacity: 0 });
 
   // Timeline scroll
   const tl = gsap.timeline({
@@ -81,7 +81,7 @@ onMounted(() => {
   });
  
   // Text từ dưới lên
-  tl.to(textRef4.value, { x: 0, duration: 1 });
+  tl.to(textRef4.value, { x: 0, opacity: 1, duration: 1 });
 
   // Hiệu ứng chờ 
   tl.to(contentRef4.value, { duration: 1 });
