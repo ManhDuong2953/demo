@@ -3,18 +3,18 @@
     <div ref="bgRef6" class="bg-[#D9D9D9] background"></div>
 
     <div ref="contentRef6"
-      class="relative flex justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper">
+      class="relative flex justify-center items-center w-screen text-center content-wrapper">
       <div class="flex flex-col justify-center items-center mx-auto container">
-        <div class="flex justify-center items-center w-full h-[80vh]">
-          <div class="flex flex-row justify-between w-full">
+        <div class="flex justify-center items-center w-full md:h-[80vh]">
+          <div class="flex md:flex-row flex-col justify-between w-full">
             <!-- Hình ảnh mặt cắt tòa nhà -->
-            <div class="w-1/2" ref="imageMainTestimonialRef">
+            <div class="md:w-1/2 h-[50vh]" ref="imageMainTestimonialRef">
               <img src="https://themarc88.com.vn/images/floor-plan-vi.png" alt="Building Floor Plan"
-                class="max-h-[80vh] object-contain">
+                class="m-auto h-full md:h-[80vh] md:max-h-[80vh] object-contain">
             </div>
             <!-- Thông tin kỹ thuật -->
-            <div class="flex flex-col justify-between py-12 w-1/2 h-full">
-              <h3 ref="titleRef" class="mb-10 pt-12 w-full font-bold text-4xl text-end">
+            <div class="flex flex-col justify-between py-6 md:py-12 md:w-1/2">
+              <h3 ref="titleRef" class="hidden md:block mb-10 pt-12 w-full font-bold text-4xl text-end">
                 <span class="text-[#C6A456]">THÔNG SỐ KỸ THUẬT</span> NỔI BẬT
               </h3>
               <div class="w-full">
@@ -129,9 +129,7 @@ onMounted(() => {
   tl.to(bgRef6.value, { y: 0, duration: 1 });
   tl.to(imageMainTestimonialRef.value, { y: 0, opacity: 1, duration: 2, ease: "power2.out" });
   tl.to(titleRef.value, { x: 0, opacity: 1, duration: 1 });
-  tl.to(tableTestimonialRefs.value, { x: 0, opacity: 1, duration: 0.5 }, "-=0.5");
-  tl.to(buttonTestimonialRefs.value, { x: 0, opacity: 1, duration: 1 });
-  tl.to(buttonTestimonialRefs.value, { duration: 2 });
+  tl.to(tableTestimonialRefs.value, { x: 0, opacity: 1, duration: 0.5 }).to(buttonTestimonialRefs.value, { x: 0, opacity: 1, duration: 1 }).to(buttonTestimonialRefs.value, { duration: 2 });
 
   // Modal animation
   gsap.set(".modal-content", { scale: 0.8, opacity: 0 });
@@ -148,8 +146,6 @@ onMounted(() => {
 <style scoped>
 .section {
   position: relative;
-  min-height: 100vh;
-  overflow: hidden;
 }
 
 .background {

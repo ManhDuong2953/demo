@@ -132,7 +132,7 @@ onMounted(() => {
   tl.to(textRefs[2], { x: 0, opacity: 1, duration: 1 }).to(progressBar.value, {
     width: "100%",
   });
-  tl.to({ duration: 5 });
+  tl.to(textRefs[2],{ duration: 5 });
 });
 </script>
 
