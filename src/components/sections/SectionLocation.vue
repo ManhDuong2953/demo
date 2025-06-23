@@ -12,7 +12,7 @@
       <!-- IMAGE-location STACK -->
       <div class="z-10 w-full h-full">
         <img v-for="(img, index) in arrImg" :key="index"
-          class="left-1/2 z-[11] absolute w-[50vw] h-screen object-cover -translate-x-1/2 image-location"
+          class="top-1/2 left-1/2 z-[11] absolute w-[100vw] md:w-[60vw] md:h-screen object-cover image-location"
           :class="`image-location${index + 1}`" :src="img" alt="image" />
       </div>
     </div>
@@ -37,7 +37,7 @@ const bgRef3 = ref();
 const contentRef3 = ref();
 
 onMounted(() => {
-    const isLargeScreen = window.innerWidth >= 768;
+  const isLargeScreen = window.innerWidth >= 768;
   const text = contentRef3.value.querySelector('.content-text-3');
   const images = contentRef3.value.querySelectorAll('.image-location');
 
@@ -49,7 +49,7 @@ onMounted(() => {
     gsap.set(img, {
       opacity: 0,
       x: "-50%",
-      y: 1000,
+      y: "100%",
       scale: i === 0 ? 0.5 : 2,
     });
   });
@@ -76,7 +76,7 @@ onMounted(() => {
   images.forEach((img, i) => {
     tl.to(img, {
       opacity: 1,
-      y: 0,
+      y: "-50%",
       scale: 1,
       duration: 10,
       ease: 'power2.out',
@@ -87,9 +87,9 @@ onMounted(() => {
 
     if (i < images.length - 1 && isLargeScreen) {
       tl.to(img, {
-        opacity: 1,
+        opacity: 0.5,
         y: 100,
-        scale: 0.8,
+        scale: 0.7,
         duration: 10,
         ease: 'power2.inOut',
       });

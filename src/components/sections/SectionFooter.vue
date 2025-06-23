@@ -1,12 +1,12 @@
 <template>
-  <footer ref="footerRef" class="bg-[#1a2e2e px-4 py-10 text-[white]">
+  <footer ref="footerRef" class="bg-[#011A1A] px-4 py-10 border-[white] border-t border-solid text-[white]">
     <div class="flex md:flex-row flex-col items-center gap-8 mx-auto container">
       <!-- Logo -->
       <div class="mb-4 p-5 w-[300px]">
         <img src="https://admin.themarc88.com.vn/assets/1fb457f8-7ed7-41ce-8684-e8683bd856a9" alt="">
       </div>
       <div class="flex flex-col flex-1 w-full">
-        <div class="flex pt-4">
+        <div class="flex md:flex-row flex-col pt-4">
           <!-- Địa chỉ -->
           <div class="flex flex-col flex-1 text-left">
             <h3 class="mb-2 mb-3 font-semibold text-[white] text-lg">Địa chỉ:</h3>
@@ -36,47 +36,47 @@
                   class="hover:text-white underline">themarc88hanoi@gmail.com</a></p>
             </div>
           </div>
+          <div class="flex flex-[2] my-10 md:my-0">
+            <!-- Đơn vị chủ đầu & Hotline -->
+            <div class="flex-1 text-left">
+              <h3 class="mb-2 mb-3 font-semibold text-[white] text-lg">Đơn vị cho thuê:</h3>
+              <img src="https://themarc88.com.vn/images/savills.svg" alt="Savills Logo" class="mr-2 w-[80px]" />
+              <h3 class="mt-3 mb-2 font-semibold text-[white] text-lg">Hotline:</h3>
+              <div class="text-white"><a href="tel:0948 000 468"
+                  class="flex items-center gap-4 text-white hover:text-secondary transition"><svg width="25" height="20"
+                    viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 7.6875C11.5469 7.6875 12.8125 8.95312 12.8125 10.5C12.8125 12.082 11.5469 13.3125 10 13.3125C8.41797 13.3125 7.1875 12.082 7.1875 10.5C7.1875 8.95312 8.41797 7.6875 10 7.6875ZM10 12.1875C10.9141 12.1875 11.6875 11.4492 11.6875 10.5C11.6875 9.58594 10.9141 8.8125 10 8.8125C9.05078 8.8125 8.3125 9.58594 8.3125 10.5C8.3125 11.4492 9.05078 12.1875 10 12.1875ZM18.5781 3.43359C18.8242 3.64453 19 3.96094 18.9648 4.3125V6.5625C18.9648 6.87891 18.6836 7.125 18.4023 7.125H16.1875C15.8711 7.125 15.625 6.87891 15.625 6.5625C15.625 6.28125 15.8711 6 16.1875 6H17.8398V4.3125C15.625 2.51953 12.8477 1.53516 10 1.5C7.11719 1.53516 4.33984 2.51953 2.08984 4.3125L2.125 6H3.8125C4.09375 6 4.375 6.28125 4.375 6.5625C4.375 6.87891 4.09375 7.125 3.8125 7.125H1.5625C1.24609 7.125 1 6.87891 1 6.5625V4.3125C0.964844 3.96094 1.14062 3.64453 1.38672 3.43359C3.8125 1.5 6.87109 0.375 10 0.375C13.0938 0.375 16.1523 1.5 18.5781 3.43359ZM14.0078 6.03516L17.5234 12.2578C17.7344 12.5742 17.8398 12.9609 17.8398 13.3828V13.875C17.8398 15.1406 16.8203 16.125 15.5898 16.125H4.33984C3.10938 16.125 2.08984 15.1406 2.08984 13.875V13.3828C2.08984 12.9609 2.19531 12.6094 2.40625 12.2578L5.95703 6.03516C6.34375 5.36719 7.01172 4.98047 7.75 4.91016C7.75 4.91016 7.75 4.91016 7.75 4.875V3.75C7.75 3.46875 7.99609 3.1875 8.3125 3.1875C8.59375 3.1875 8.875 3.46875 8.875 3.75V4.875H11.125V3.75C11.125 3.46875 11.3711 3.1875 11.6875 3.1875C11.9688 3.1875 12.25 3.46875 12.25 3.75V4.875C12.25 4.91016 12.2148 4.91016 12.2148 4.91016C12.9531 4.98047 13.6211 5.36719 14.0078 6.03516ZM16.7148 13.875H16.75V13.3477C16.75 13.1719 16.6797 12.9609 16.5742 12.8203L13.0234 6.59766C12.8125 6.24609 12.4609 6 12.0391 6H7.92578C7.50391 6 7.15234 6.24609 6.94141 6.63281L3.39062 12.8203C3.28516 12.9609 3.25 13.1719 3.25 13.3477V13.875C3.25 14.5078 3.74219 15 4.375 15H15.5898C16.1875 15 16.7148 14.5078 16.7148 13.875Z"
+                      fill="#C6A456"></path>
+                  </svg><span>0948 000 468</span></a></div>
+            </div>
 
-          <!-- Đơn vị chủ đầu & Hotline -->
-          <div class="flex-1 text-left">
-            <h3 class="mb-2 mb-3 font-semibold text-[white] text-lg">Đơn vị chủ đầu:</h3>
-            <img src="https://themarc88.com.vn/images/savills.svg" alt="Savills Logo" class="mr-2 w-[80px]" />
-            <h3 class="mt-3 mb-2 font-semibold text-[white] text-lg">Hotline:</h3>
-            <div class="text-white"><a href="tel:0948 000 468"
-                class="flex items-center gap-4 text-white hover:text-secondary transition"><svg width="25" height="20"
-                  viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M10 7.6875C11.5469 7.6875 12.8125 8.95312 12.8125 10.5C12.8125 12.082 11.5469 13.3125 10 13.3125C8.41797 13.3125 7.1875 12.082 7.1875 10.5C7.1875 8.95312 8.41797 7.6875 10 7.6875ZM10 12.1875C10.9141 12.1875 11.6875 11.4492 11.6875 10.5C11.6875 9.58594 10.9141 8.8125 10 8.8125C9.05078 8.8125 8.3125 9.58594 8.3125 10.5C8.3125 11.4492 9.05078 12.1875 10 12.1875ZM18.5781 3.43359C18.8242 3.64453 19 3.96094 18.9648 4.3125V6.5625C18.9648 6.87891 18.6836 7.125 18.4023 7.125H16.1875C15.8711 7.125 15.625 6.87891 15.625 6.5625C15.625 6.28125 15.8711 6 16.1875 6H17.8398V4.3125C15.625 2.51953 12.8477 1.53516 10 1.5C7.11719 1.53516 4.33984 2.51953 2.08984 4.3125L2.125 6H3.8125C4.09375 6 4.375 6.28125 4.375 6.5625C4.375 6.87891 4.09375 7.125 3.8125 7.125H1.5625C1.24609 7.125 1 6.87891 1 6.5625V4.3125C0.964844 3.96094 1.14062 3.64453 1.38672 3.43359C3.8125 1.5 6.87109 0.375 10 0.375C13.0938 0.375 16.1523 1.5 18.5781 3.43359ZM14.0078 6.03516L17.5234 12.2578C17.7344 12.5742 17.8398 12.9609 17.8398 13.3828V13.875C17.8398 15.1406 16.8203 16.125 15.5898 16.125H4.33984C3.10938 16.125 2.08984 15.1406 2.08984 13.875V13.3828C2.08984 12.9609 2.19531 12.6094 2.40625 12.2578L5.95703 6.03516C6.34375 5.36719 7.01172 4.98047 7.75 4.91016C7.75 4.91016 7.75 4.91016 7.75 4.875V3.75C7.75 3.46875 7.99609 3.1875 8.3125 3.1875C8.59375 3.1875 8.875 3.46875 8.875 3.75V4.875H11.125V3.75C11.125 3.46875 11.3711 3.1875 11.6875 3.1875C11.9688 3.1875 12.25 3.46875 12.25 3.75V4.875C12.25 4.91016 12.2148 4.91016 12.2148 4.91016C12.9531 4.98047 13.6211 5.36719 14.0078 6.03516ZM16.7148 13.875H16.75V13.3477C16.75 13.1719 16.6797 12.9609 16.5742 12.8203L13.0234 6.59766C12.8125 6.24609 12.4609 6 12.0391 6H7.92578C7.50391 6 7.15234 6.24609 6.94141 6.63281L3.39062 12.8203C3.28516 12.9609 3.25 13.1719 3.25 13.3477V13.875C3.25 14.5078 3.74219 15 4.375 15H15.5898C16.1875 15 16.7148 14.5078 16.7148 13.875Z"
-                    fill="#C6A456"></path>
-                </svg><span>0948 000 468</span></a></div>
+            <!-- Trang chủ -->
+            <div class="flex flex-col flex-1 pl-12 md:pl-0 text-left">
+              <a href="" class="hover:opacity-80 mb-1">Trang chủ</a>
+              <a href="" class="hover:opacity-80 mb-1">Tổng quan</a>
+              <a href="" class="hover:opacity-80 mb-1">Vị trí</a>
+              <a href="" class="hover:opacity-80 mb-1">Dự án</a>
+              <a href="" class="hover:opacity-80 mb-1">Chủ đầu tư</a>
+              <a href="" class="hover:opacity-80 mb-1">Ảnh</a>
+              <a href="" class="hover:opacity-80 mb-1">Tin tức</a>
+              <a href="" class="hover:opacity-80 mb-1">Tải brochure</a>
+              <a href="" class="hover:opacity-80 mb-1">Tải tờ rơi</a>
+            </div>
           </div>
-
-          <!-- Trang chủ -->
-          <div class="flex flex-col flex-1 text-left">
-            <a href="" class="hover:opacity-80 mb-1">Trang chủ</a>
-            <a href="" class="hover:opacity-80 mb-1">Tổng quan</a>
-            <a href="" class="hover:opacity-80 mb-1">Vị trí</a>
-            <a href="" class="hover:opacity-80 mb-1">Dự án</a>
-            <a href="" class="hover:opacity-80 mb-1">Chủ đầu tư</a>
-            <a href="" class="hover:opacity-80 mb-1">Ảnh</a>
-            <a href="" class="hover:opacity-80 mb-1">Tin tức</a>
-            <a href="" class="hover:opacity-80 mb-1">Tải brochure</a>
-            <a href="" class="hover:opacity-80 mb-1">Tải tờ rơi</a>
-          </div>
-
 
         </div>
         <div class="mt-2 mb-6">
           <button
-            class="hover:bg-[#a68f44] px-6 py-2 border border-[#c6a456] border-solid rounded rounded-[68px] w-fit text-white text-xl uppercase transition duration-300 cursor-pointer">Liên
+            class="hover:bg-[#a68f44] px-6 py-2 border border-[#c6a456] border-solid rounded rounded-[68px] w-fit text-white text-xl uppercase transition duration-300 cursor-pointer btn-contact">Liên
             hệ tư vấn cho thuê
           </button>
         </div>
-        <div class="flex justify-between pb-4 border-t">
-          <div class="mt-6 text-[white] text-center">Copyright ©2023 TheMarc88. All rights reserved.
+        <div class="flex md:flex-row flex-col-reverse justify-between pb-4 border-t">
+          <div class="mt-6 text-[#6B7280] text-sm text-center">Copyright ©2023 TheMarc88. All rights reserved.
           </div>
           <!-- Social Icons -->
-          <div class="hidden md:flex items-center gap-4 mt-6">
+          <div class="flex justify-center md:justify-start items-center gap-4 mt-6">
             <a href="#" class="hover:opacity-80">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50">
                 <path fill="#C2B59B" stroke="#C2B59B"
@@ -84,7 +84,8 @@
                 </path>
               </svg>
             </a>
-            <a href="#" class="hover:opacity-80"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48">
+            <a href="#" class="hover:opacity-80"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                viewBox="0 0 48 48">
                 <path fill="#C2B59B"
                   d="M8.421,14h0.052l0,0C11.263,14,13,12,13,9.5C12.948,6.945,11.263,5,8.526,5S4,6.945,4,9.5 C4,12,5.736,14,8.421,14z M4,17h9v26H4V17z M44,26.5c0-5.247-4.253-9.5-9.5-9.5c-3.053,0-5.762,1.446-7.5,3.684V17h-9v26h9V28l0,0 c0-2.209,1.791-4,4-4s4,1.791,4,4v15h9C44,43,44,27.955,44,26.5z">
                 </path>
@@ -138,7 +139,7 @@ onMounted(() => {
   });
 
   // Animation cho nút liên hệ
-  const button = footerRef.value.querySelector('.bg-[#c6a456]');
+  const button = footerRef.value.querySelector('.btn-contact');
   gsap.from(button, {
     scale: 0.8,
     opacity: 0,

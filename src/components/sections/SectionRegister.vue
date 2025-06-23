@@ -4,35 +4,35 @@
 
     <div ref="contentRef7" class="h-screen content">
       <div class="flex items-center py-12 container">
-        <div class="flex-1"></div>
+        <div class="hidden md:block flex-1"></div>
         <!-- TEXT + IMAGES -->
         <div class="flex flex-col flex-[7] justify-start gap-8 px-6 md:px-12 md:py-12">
-          <h3 ref="titleRef7" class="font-semibold text-white text-5xl text-end leading-tight">
+          <h3 ref="titleRef7" class="font-semibold text-white text-5xl text-center md:text-end leading-tight">
             <span class="text-[#C6A456]">ĐƠN VỊ PHÁT TRIỂN</span> DỰ ÁN
           </h3>
 
-          <div class="flex items-center image-register-1">
-            <img class="mr-12 px-3 w-[200px] object-contain" src="https://themarc88.com.vn/images/haison.png"
+          <div class="flex md:flex-row flex-col justify-center md:justify-start items-center image-register-1">
+            <img class="md:mr-12 px-3 w-[200px] object-contain" src="https://themarc88.com.vn/images/haison.png"
               alt="Hải Sơn" />
-            <div class="flex flex-col pl-12">
-              <div class="pb-4 font-semibold text-[#C6A456] text-lg uppercase">
+            <div class="flex flex-col md:pl-12">
+              <div class="pb-4 font-semibold text-[#C6A456] text-lg text-center md:text-start uppercase">
                 CHỦ ĐẦU TƯ - CÔNG TY TNHH DV TH HẢI SƠN
               </div>
-              <div class="text-md text-white text-start leading-6 content1">
+              <div class="text-md text-white text-center md:text-start leading-6 content1">
                 Sở hữu đội ngũ chuyên gia, nền tảng vững vàng cùng tầm nhìn mới mẻ, Công ty TNHH DV TH Hải Sơn xây dựng
                 tầm nhìn trở thành nhà cung cấp dịch vụ bất động sản đáng tin cậy trên thị trường.
               </div>
             </div>
           </div>
 
-          <div class="flex items-center image-register-2">
-            <img class="mr-12 px-3 w-[200px] object-contain" src="https://themarc88.com.vn/images/aedas.png"
+          <div class="flex md:flex-row flex-col justify-center md:justify-start items-center image-register-2">
+            <img class="md:mr-12 px-3 w-[200px] object-contain" src="https://themarc88.com.vn/images/aedas.png"
               alt="Aedas" />
-            <div class="flex flex-col pl-12">
-              <div class="pb-4 font-semibold text-[#C6A456] text-lg uppercase">
+            <div class="flex flex-col md:pl-12">
+              <div class="pb-4 font-semibold text-[#C6A456] text-lg text-center md:text-start uppercase">
                 ĐƠN VỊ THIẾT KẾ Ý TƯỞNG - CÔNG TY TNHH AEDAS VIỆT NAM
               </div>
-              <div class="text-md text-white text-start leading-6 content2">
+              <div class="text-md text-white text-center md:text-start leading-6 content2">
                 Aedas là công ty thiết kế kiến trúc nhiều năm liền nằm trong Top 10 hãng tư vấn thiết kế lớn nhất thế
                 giới.
               </div>
