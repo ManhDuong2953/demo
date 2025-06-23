@@ -14,7 +14,6 @@
         <img v-for="(img, index) in arrImg" :key="index"
           class="top-1/2 left-1/2 z-[11] absolute w-[100vw] md:w-[60vw] md:h-screen object-cover image-location"
           :class="`image-location${index + 1}`" :src="img" alt="image" />
-
       </div>
     </div>
 
@@ -60,7 +59,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef3.value,
       start: 'top top',
-      end: '+=500%',
+      end: '+=600%',
       scrub: 2,
       pin: true,
       // markers: true, // Bật lên nếu muốn debug
@@ -71,8 +70,7 @@ onMounted(() => {
   tl.to(bgRef3.value, { y: 0, duration: 1 });
 
   tl.to(text, { opacity: 1, y: 0, duration: 10 });
-  tl.to(text, { duration: 10 });
-
+  tl.to(text, { duration: 20 });
   tl.to(text, { opacity: 0, y: -50, duration: 10 });
 
   images.forEach((img, i) => {

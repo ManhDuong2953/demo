@@ -15,7 +15,7 @@ html {
 
 .section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -27,16 +27,6 @@ html {
   margin: auto;
 }
 
-.content {
-  min-height: 100vh;
-}
-
-@media (min-width:768px) {
-  .content {
-    max-height: 100vh;
-  }
-  
-  .section {
-    max-height: 100vh;
-  }
+.content{
+  max-height: 100vh;
 }
