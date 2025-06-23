@@ -13,7 +13,6 @@
       <!-- IMAGE-location STACK -->
       <div class="z-10 w-full h-full">
         <img v-for="(img, index) in arrImg" :key="index"
-          style="translate: none;rotate: none;scale: none;transform: translate(-50%, 0px);opacity: 1;"
           class="left-1/2 z-[11] absolute w-[70vw] h-screen object-cover -translate-x-1/2 image-gallery"
           :class="`image-gallery${index + 1}`" :src="img" alt="image" />
       </div>
