@@ -12,7 +12,6 @@
       <!-- IMAGE-location STACK -->
       <div class="z-10 w-full h-full">
         <img v-for="(img, index) in arrImg" :key="index"
-          style="translate: none;rotate: none;scale: none;transform: translate(-50%, 0px);opacity: 1;"
           class="left-1/2 z-[11] absolute w-[50vw] h-screen object-cover -translate-x-1/2 image-location"
           :class="`image-location${index + 1}`" :src="img" alt="image" />
       </div>
@@ -59,7 +58,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef3.value,
       start: 'top top',
-      end: '+=500%',
+      end: '+=600%',
       scrub: 2,
       pin: true,
       // markers: true, // Bật lên nếu muốn debug
@@ -70,8 +69,7 @@ onMounted(() => {
   tl.to(bgRef3.value, { y: 0, duration: 1 });
 
   tl.to(text, { opacity: 1, y: 0, duration: 10 });
-  tl.to(text, { duration: 10 });
-
+  tl.to(text, { duration: 20 });
   tl.to(text, { opacity: 0, y: -50, duration: 10 });
 
   images.forEach((img, i) => {
