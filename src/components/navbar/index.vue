@@ -1,23 +1,26 @@
 <template>
   <!-- Navbar -->
   <nav
-    class="top-0 left-0 z-50 fixed flex justify-between items-center bg-transparent backdrop-blur-md px-6 pt-4 w-full h-[100px] text-white transition-transform duration-300"
+    class="top-0 left-0 z-50 fixed flex justify-between items-center bg-transparent backdrop-blur-md px-6 pt-4 w-full h-fit text-white transition-transform duration-300"
     :class="{ '-translate-y-[200%]': isHidden }">
-    <div class="container">
+    <div class="bg-transparent container">
       <div class="flex items-end h-[100px]">
         <!-- Toggle Menu icon -->
         <button @click="toggleMenu"
-          class="flex-1 justify-self-start pt-6 pr-6 pb-4 border-white border-b font-bold text-3xl text-start boder-solid">
+          class="flex-1 justify-self-start pt-6 pr-6 pb-4 border-white border-b font-bold text-3xl text-start cursor-pointer boder-solid">
           <span v-if="!menuOpen">☰</span>
           <span v-else>✕</span>
         </button>
         <!-- Logo -->
-        <img :src="logo" alt="Vue Logo" class="w-fit h-full" />
+        <a href="#home" class="w-fit h-full">
+          <img :src="logo" alt="Vue Logo" class="w-fit h-full" />
+        </a>
 
         <div class="flex flex-1 justify-end items-center pt-6 pb-4 pl-6 border-white border-b boder-solid">
           <!-- Language Switcher -->
           <div class="ml-4 text-sm md:text-base">
-            <span class="font-bold hover:text-green-200 cursor-pointer">VN</span> / <span class="font-bold hover:text-green-200 cursor-pointer">EN</span>
+            <span class="font-bold hover:text-green-200 cursor-pointer">VN</span> / <span
+              class="font-bold hover:text-green-200 cursor-pointer">EN</span>
           </div>
         </div>
       </div>
@@ -26,10 +29,9 @@
 
   <!-- Fullscreen Drawer Menu -->
   <transition name="fade">
-    <div v-if="menuOpen"
+    <div
       class="z-40 fixed inset-0 flex flex-col justify-center items-center space-y-6 bg-[#011a1acc] font-semibold text-[#D3A84A] text-2xl"
-      :class="{ 'opacity-1': menuOpen }"
-      @mouseenter="lockScroll" @mouseleave="unlockScroll">
+      :class="{ 'opacity-1': !menuOpen || isHidden }">
 
       <!-- Menu Items -->
       <ul
@@ -71,14 +73,14 @@ const unlockScroll = () => {
 };
 
 const handleScroll = () => {
-  const current = window.scrollY;  
+  const current = window.scrollY;
   isHidden.value = current > lastScroll.value && current > 30;
   lastScroll.value = current;
 };
 
 watch(menuOpen, (isOpen) => {
-  document.body.classList.toggle('overflow-hidden', isOpen)
-})
+  document.body.classList.toggle('overflow-hidden', isOpen);
+});
 
 
 onMounted(() => {
@@ -93,7 +95,6 @@ onBeforeUnmount(() => {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  opacity: 1;
   transition: opacity 0.3s ease;
 }
 

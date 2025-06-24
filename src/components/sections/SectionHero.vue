@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef" class="section">
+  <section id="home" ref="sectionRef" class="section">
     <div ref="bgRef" class="bg-position-[center_top_0rem] bg-no-repeat bg-center background"
       :style="{ backgroundImage: `url(${bgImage})` }"></div>
     <div ref="contentRef" class="content">

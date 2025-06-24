@@ -1,9 +1,8 @@
 <template>
-  <section ref="sectionRef6" class="bg-[#D9D9D9] text-black section">
+  <section id="leasing" ref="sectionRef6" class="bg-[#D9D9D9] text-black section">
     <div ref="bgRef6" class="bg-[#D9D9D9] background"></div>
 
-    <div ref="contentRef6"
-      class="relative flex justify-center items-center w-screen text-center content-wrapper">
+    <div ref="contentRef6" class="relative flex justify-center items-center w-screen text-center content-wrapper">
       <div class="flex flex-col justify-center items-center mx-auto container">
         <div class="flex justify-center items-center w-full md:h-[80vh]">
           <div class="flex md:flex-row flex-col justify-between w-full">
@@ -13,7 +12,7 @@
                 class="m-auto h-full md:h-[80vh] md:max-h-[80vh] object-contain">
             </div>
             <!-- Thông tin kỹ thuật -->
-            <div class="flex flex-col justify-between py-6 md:py-12 md:w-1/2">
+            <div class="flex flex-col justify-between px-6 md:px-0 py-6 md:py-12 md:w-1/2">
               <h3 ref="titleRef" class="hidden md:block mb-10 pt-12 w-full font-bold text-4xl text-end">
                 <span class="text-[#C6A456]">THÔNG SỐ KỸ THUẬT</span> NỔI BẬT
               </h3>

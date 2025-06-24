@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef5" class="bg-[#011A1A] text-white section">
+  <section id="features" ref="sectionRef5" class="bg-[#011A1A] text-white section">
     <!-- Background hiệu ứng -->
     <div ref="bgRef5" class="bg-[#011A1A] background"></div>
 

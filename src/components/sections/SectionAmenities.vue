@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef4" class="bg-black text-white section">
+  <section id="location" ref="sectionRef4" class="bg-black text-white section">
     <!-- Background nếu muốn hiệu ứng nền -->
     <div ref="bgRef4" class="bg-black background"></div>
 

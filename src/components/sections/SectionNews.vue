@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef8" class="bg-[#011A1A] text-white section">
+  <section id="news" ref="sectionRef8" class="bg-[#011A1A] text-white section">
     <!-- BG chuyển động -->
     <div ref="bgRef8" class="bg-[#011A1A] background"></div>
 

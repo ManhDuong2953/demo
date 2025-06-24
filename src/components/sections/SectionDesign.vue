@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef2" class="bg-[#D9D9D9] section">
+  <section id="overview" ref="sectionRef2" class="bg-[#D9D9D9] section">
     <div ref="bgRef2" class="bg-[#D9D9D9] background"></div>
     <div ref="contentRef2" class="md:h-screen min-h-screen content">
       <div class="flex md:flex-row flex-col py-12 container">
@@ -60,7 +60,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef2.value,
       start: 'top top',
-      end: '+=300%',
+      end: '+=200%',
       scrub: 1,
       pin: true,
     }

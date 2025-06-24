@@ -69,35 +69,35 @@ onMounted(() => {
   // 3. Animate tuần tự
   tl.to(bgRef3.value, { y: 0, duration: 1 });
 
-  tl.to(text, { opacity: 1, y: 0, duration: 10 });
-  tl.to(text, { duration: 20 });
+  tl.to(text, { opacity: 1, y: 0, duration: 50 });
+  tl.to(text, { duration: 100 });
   tl.to(text, { opacity: 0, y: -50, duration: 10 });
 
   images.forEach((img, i) => {
+    // Ảnh xuất hiện mượt
     tl.to(img, {
       opacity: 1,
       y: "-50%",
       scale: 1,
-      duration: 10,
+      duration: 100,
       ease: 'power2.out',
-    });
-    tl.to(img, {
-      duration: 15,
-    });
+    },'<0.2');
 
+    // Ảnh giữ nguyên khoảng thời gian lâu (2 lướt chuột tương đối)
+    tl.to(img, {
+      duration: 100, // Tăng duration rỗng, bạn chỉnh lớn nhỏ theo cảm giác scroll của mình
+    },'<0.2');
+
+    // Ảnh mờ đi và thu nhỏ trước khi chuyển sang ảnh tiếp
     if (i < images.length - 1 && isLargeScreen) {
       tl.to(img, {
         opacity: 0.5,
-        y: 100,
-        scale: 0.7,
-        duration: 10,
-        ease: 'power2.inOut',
+        y: "98%",
+        scale: 0.8,
+        duration: 100,
+        ease: 'power2.out',
       });
     }
-
-    tl.to(img, {
-      duration: 15,
-    });
   });
 });
 </script>

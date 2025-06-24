@@ -1,7 +1,7 @@
 <template>
   <main>
-    <SectionHero />
     <NavBar />
+    <SectionHero />
     <SectionDesign />
     <SectionLocation />
     <SectionAmenities />
