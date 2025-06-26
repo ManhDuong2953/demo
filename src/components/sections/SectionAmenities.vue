@@ -7,7 +7,7 @@
       class="relative flex md:flex-row flex-col justify-center items-center w-screen h-screen overflow-hidden text-center content-wrapper">
       <!-- Ảnh chính -->
       <div class="relative flex-[3] md:flex-[5] w-full min-h-1/2 overflow-hidden">
-        <img src="https://themarc88.com.vn/images/map-m88.png" alt="img"
+        <img src="@/assets/map-m88.png" alt="img"
           class="w-full h-full object-cover image-main-amenities" />
       </div>
 

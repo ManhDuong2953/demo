@@ -1,6 +1,6 @@
 <template>
   <section id="home" ref="sectionRef" class="section">
-    <div ref="bgRef" class="bg-position-[center_top_0rem] bg-no-repeat bg-center background"
+    <div ref="bgRef" class="bg-position-[center_top_0rem] bg-cover bg-no-repeat bg-center background"
       :style="{ backgroundImage: `url(${bgImage})` }"></div>
     <div ref="contentRef" class="content">
       <h1 class="font-bold text-5xl content-item">Chào mừng bạn đến với Aurora</h1>
@@ -13,13 +13,12 @@
 import { ref, onMounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import bgImage from '@/assets/hero.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 const sectionRef = ref();
 const bgRef = ref();
 const contentRef = ref();
-const bgImage = '	https://admin.themarc88.com.vn/assets/68816070-d8ad-4818-b2e5-80c76d2b7e69'; // Replace with your image URL
 
 onMounted(() => {
   const contentItems = contentRef.value.querySelectorAll('.content-item');

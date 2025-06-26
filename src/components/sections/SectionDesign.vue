@@ -16,18 +16,18 @@
           </div>
           <div class="flex justify-center md:justify-start space-x-1 content-text-2">
             <img alt="bamboo" width="156" height="50"
-              src="https://themarc88.com.vn/_next/static/media/bamboo.4f48509f.svg" />
+              src="@/assets/bamboo.4f48509f.svg" />
             <img alt="bamboo" width="156" height="50"
-              src="https://themarc88.com.vn/_next/static/media/bamboo.4f48509f.svg" />
+              src="@/assets/bamboo.4f48509f.svg" />
           </div>
         </div>
 
         <!-- IMAGES -->
         <div class="flex md:flex-row flex-col flex-1 justify-between items-center">
           <img class="my-3 px-3 h-[65vw] md:h-[70vh] object-contain image-design-1"
-            src="https://admin.themarc88.com.vn/assets/bc4be0a3-e6ad-4d9a-a9f1-1e41910c1e4b" alt="image1" />
+            src="@/assets/building.png" alt="image1" />
           <img class="my-3 px-3 h-[65vw] md:h-[70vh] object-contain image-design-2"
-            src="https://admin.themarc88.com.vn/assets/5062bdfa-13f6-49c3-9c23-5d8569dabc6c" alt="image2" />
+            src="@/assets/bamboo-leaf.png" alt="image2" />
         </div>
       </div>
     </div>

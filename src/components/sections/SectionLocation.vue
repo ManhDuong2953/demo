@@ -23,14 +23,17 @@
 import { ref, onMounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import image3 from '@/assets/V3.jpg';
+import image4 from '@/assets/V4.jpg';
+import image5 from '@/assets/V5.jpg';
+import image6 from '@/assets/V6.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 const arrImg = [
-  'https://admin.themarc88.com.vn/assets/a98bc324-ef77-4581-8590-935cd5bce805',
-  'https://admin.themarc88.com.vn/assets/0ab3922b-06a5-4f5c-85c3-c4759369ddbf',
-  'https://admin.themarc88.com.vn/assets/95e964a0-7ea8-45c3-b35f-a8f6c4276410',
-  'https://admin.themarc88.com.vn/assets/03139784-6c13-4fcd-8a4c-81354cb4f760',
+  image5, 
+  image3,
+  image4,
+  image6,
 ];
 const sectionRef3 = ref();
 const bgRef3 = ref();

@@ -3,7 +3,7 @@
     <div class="flex md:flex-row flex-col items-center gap-8 mx-auto container">
       <!-- Logo -->
       <div class="mb-4 p-5 w-[300px]">
-        <img src="https://admin.themarc88.com.vn/assets/1fb457f8-7ed7-41ce-8684-e8683bd856a9" alt="">
+        <img src="@/assets/logo.svg" alt="">
       </div>
       <div class="flex flex-col flex-1 w-full">
         <div class="flex md:flex-row flex-col pt-4">
@@ -40,7 +40,7 @@
             <!-- Đơn vị chủ đầu & Hotline -->
             <div class="flex-1 text-left">
               <h3 class="mb-2 mb-3 font-semibold text-[white] text-lg">Đơn vị cho thuê:</h3>
-              <img src="https://themarc88.com.vn/images/savills.svg" alt="Savills Logo" class="mr-2 w-[80px]" />
+              <img src="@/assets/savills.svg" alt="Savills Logo" class="mr-2 w-[80px]" />
               <h3 class="mt-3 mb-2 font-semibold text-[white] text-lg">Hotline:</h3>
               <div class="text-white"><a href="tel:0948 000 468"
                   class="flex items-center gap-4 text-white hover:text-secondary transition"><svg width="25" height="20"

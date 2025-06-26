@@ -38,7 +38,7 @@ import 'slick-carousel';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import imageSlide from '@/assets/slide-1.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 // Refs
@@ -51,32 +51,32 @@ const sliderRef8 = ref(null);
 const slideItems = [
   {
     label: 'Hot',
-    image: 'https://admin.themarc88.com.vn/assets/f258e3d3-a0be-4d8a-8648-bd27737a3923',
+    image: imageSlide,
     description: 'Hình ảnh dự án thi công tháng 03/2025',
   },
   {
     label: 'Latest',
-    image: 'https://admin.themarc88.com.vn/assets/f258e3d3-a0be-4d8a-8648-bd27737a3923',
+    image: imageSlide,
     description: 'Tiến độ xây dựng tháng 04/2025',
   },
   {
     label: 'New',
-    image: 'https://admin.themarc88.com.vn/assets/f258e3d3-a0be-4d8a-8648-bd27737a3923',
+    image: imageSlide,
     description: 'Thông báo mới từ chủ đầu tư',
   },
   {
     label: 'Hot',
-    image: 'https://admin.themarc88.com.vn/assets/f258e3d3-a0be-4d8a-8648-bd27737a3923',
+    image: imageSlide,
     description: 'Hình ảnh dự án thi công tháng 03/2025',
   },
   {
     label: 'Latest',
-    image: 'https://admin.themarc88.com.vn/assets/f258e3d3-a0be-4d8a-8648-bd27737a3923',
+    image: imageSlide,
     description: 'Tiến độ xây dựng tháng 04/2025',
   },
   {
     label: 'New',
-    image: 'https://admin.themarc88.com.vn/assets/f258e3d3-a0be-4d8a-8648-bd27737a3923',
+    image: imageSlide,
     description: 'Thông báo mới từ chủ đầu tư',
   }
 ];

@@ -13,7 +13,7 @@
         </button>
         <!-- Logo -->
         <a href="#home" class="w-fit h-full">
-          <img :src="logo" alt="Vue Logo" class="w-fit h-full" />
+          <img src="@/assets/logo.svg" alt="Vue Logo" class="w-fit h-full" />
         </a>
 
         <div class="flex flex-1 justify-end items-center pt-6 pb-4 pl-6 border-white border-b boder-solid">
@@ -31,7 +31,7 @@
   <transition name="fade">
     <div
       class="z-40 fixed inset-0 flex flex-col justify-center items-center space-y-6 bg-[#011a1acc] font-semibold text-[#D3A84A] text-2xl"
-      :class="{ 'opacity-1': !menuOpen || isHidden }">
+      :class="{ 'opacity-1 translate-y-[-100%]': !menuOpen || isHidden }">
 
       <!-- Menu Items -->
       <ul
@@ -50,9 +50,6 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
-
-// Dùng Vue logo tạm từ CDN
-const logo = 'https://admin.themarc88.com.vn/assets/1fb457f8-7ed7-41ce-8684-e8683bd856a9';
 
 const isHidden = ref(false);
 const lastScroll = ref(0);
@@ -101,5 +98,6 @@ onBeforeUnmount(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  display: none;
 }
 </style>

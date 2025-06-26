@@ -12,7 +12,7 @@
           </h3>
 
           <div class="flex md:flex-row flex-col justify-center md:justify-start items-center image-register-1">
-            <img class="md:mr-12 px-3 w-[200px] object-contain" src="https://themarc88.com.vn/images/haison.png"
+            <img class="md:mr-12 px-3 w-[200px] object-contain" src="@/assets/haison.png"
               alt="Hải Sơn" />
             <div class="flex flex-col md:pl-12">
               <div class="pb-4 font-semibold text-[#C6A456] text-lg text-center md:text-start uppercase">
@@ -26,7 +26,7 @@
           </div>
 
           <div class="flex md:flex-row flex-col justify-center md:justify-start items-center image-register-2">
-            <img class="md:mr-12 px-3 w-[200px] object-contain" src="https://themarc88.com.vn/images/aedas.png"
+            <img class="md:mr-12 px-3 w-[200px] object-contain" src="@/assets/aedas.png"
               alt="Aedas" />
             <div class="flex flex-col md:pl-12">
               <div class="pb-4 font-semibold text-[#C6A456] text-lg text-center md:text-start uppercase">
