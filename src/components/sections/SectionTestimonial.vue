@@ -184,8 +184,10 @@ onMounted(() => {
       trigger: sectionRef6.value,
       start: "top top",
       end: "+=3000",
-      scrub: 1,
-      pin: true,
+      scrub: 2,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      fastScrollEnd: true,pin: true,            pinSpacing: true,markers: false,
     },
   });
 

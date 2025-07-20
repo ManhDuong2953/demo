@@ -115,8 +115,10 @@ onMounted(() => {
       trigger: sectionRef8.value,
       start: 'top top',
       end: '+=200%',
-      pin: true,
-      scrub: 1,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      fastScrollEnd: true,pin: true,            pinSpacing: true,markers: false,
+      scrub: 2,
     }
   });
 

@@ -62,9 +62,13 @@ onMounted(() => {
     scrollTrigger: {
       trigger: sectionRef3.value,
       start: 'top top',
-      end: '+=600%',
+      end: '+=500%',
       scrub: 2,
-      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      fastScrollEnd: true,pin: true,            pinSpacing: true,markers: false,
+      
+      // pinSpacing: true, 
       // markers: true, // Bật lên nếu muốn debug
     },
   });
@@ -84,12 +88,12 @@ onMounted(() => {
       scale: 1,
       duration: 100,
       ease: 'power2.out',
-    },'<0.2');
+    },'<1');
 
     // Ảnh giữ nguyên khoảng thời gian lâu (2 lướt chuột tương đối)
     tl.to(img, {
-      duration: 100, // Tăng duration rỗng, bạn chỉnh lớn nhỏ theo cảm giác scroll của mình
-    },'<0.2');
+      duration: 200, // Tăng duration rỗng, bạn chỉnh lớn nhỏ theo cảm giác scroll của mình
+    },'<2');
 
     // Ảnh mờ đi và thu nhỏ trước khi chuyển sang ảnh tiếp
     if (i < images.length - 1 && isLargeScreen) {
@@ -98,7 +102,7 @@ onMounted(() => {
         y: "98%",
         scale: 0.8,
         duration: 100,
-        ease: 'power2.out',
+        ease: 'power2.in',
       });
     }
   });
